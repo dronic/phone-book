@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: v5.1.0
+dependencies:
+  pre:
+    - npm install ember-cli@2.3.0-beta.2 bower jscs jshint -g
+  post:
+    - bower install
+test:
+  override:
+    - jshint ./app/
+    - jscs ./app/
+    - ember test
